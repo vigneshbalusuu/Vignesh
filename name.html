@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Message</title>
+    <style>
+        body {
+            background-image: url('file:///C:/Users/vigne/OneDrive/Pictures/csp%20ppt%20pics/ai.png'); /* Set the background image */
+            background-size: cover; /* Cover the entire background */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: gold; /* Gold text color */
+            font-size: 24px; /* Font size */
+            animation: moveText 4s infinite linear; /* Animation */
+        }
+
+        /* Define the animation */
+        @keyframes moveText {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(200px); /* Adjust the distance */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello <span id="userName"></span>, welcome to Artificial Intelligence and Data Science</h1>
+    
+    <script>
+        // Get the user's name from the URL query string
+        const urlParams = new URLSearchParams(window.location.search);
+        const userName = urlParams.get('userName');
+
+        // Display the user's name in the welcome message
+        const userNameElement = document.getElementById("userName");
+        if (userNameElement) {
+            userNameElement.textContent = userName;
+        }
+    </script>
+</body>
+</html>
